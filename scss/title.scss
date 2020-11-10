@@ -1,0 +1,28 @@
+$font-size-multiplier: 0.125!default;
+$marge-size-multiplier: $font-size-multiplier!default;
+$h1-color: inherit!default;
+$h2-color: inherit!default;
+
+$title-color: (
+        "h1": inherit,
+        "h2": inherit,
+        "h3": inherit,
+        "h4": inherit,
+        "h5": inherit,
+        "h6": inherit,
+)!default;
+
+
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    @if map_get($title-color, h#{$i}) != null {
+      color: map_get($title-color, h#{$i});
+    } @else {
+      color: inherit;
+    }
+    font-size: 1 + ($font-size-multiplier * ( 7 - $i )) * 1rem;
+    margin: ($marge-size-multiplier * ( 7 - $i )) * 1rem 0;
+    font-weight: 500;
+  }
+}

@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body {
+  font-family: 'Cabin', sans-serif;
+  background-color: rgb(217, 217, 217);
+}
+
+* {
+  -webkit-box-sizing: border-box;
+}
+
+@import "../node_modules/appeweb-grid/src/sass/grid";
+@import "colors";
+@import "badge";
+@import "title";
+
+@mixin box-shadow {
+  box-shadow: #000000 0 2px 5px;
+}
+
+header.container-fluid {
+  @include box-shadow;
+  border-radius: 10px;
+  text-align: center;
+  margin: 1rem;
+  padding: 1rem;
+  background-color: rgb(49, 47, 47);
+  color: #ffffff;
+}
+
+section {
+  padding: 1rem;
+
+  .section-body {
+    padding: 1rem;
+    border: 1px solid rgb(60, 93, 153);
+    border-radius: 10px;
+    background-color: #eeeded;
+    @include box-shadow;
+
+    .section-title {
+      color: rgb(34, 64, 151);
+      font-weight: bold;
+
+      &::after {
+        margin-top: 5px;
+        display: block;
+        content: '';
+        background-color: rgb(34, 64, 151);
+        height: 3px;
+        border-radius: 25%;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.badge {
+  margin: 0 0.5rem;
+}

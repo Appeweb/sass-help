@@ -1,0 +1,20 @@
+$turquoise: #45a7c4;
+$light-blue: #5d9cec;
+$blue: #1e68ac;
+$dark-blue: #004665;
+$light-gray: #e6edf0;
+$white: #ffffff;
+$gray: #6c787d;
+$orange: #fe7800;
+$light-black: #212529;
+$green: #28a745;
+$red: #dc3545;
+$bootstrap-blue: #007bff;
+
+$theme-colors: (
+        "success": $green,
+        "danger": $red,
+        "primary": $bootstrap-blue,
+        "secondary": $gray,
+        "light": $light-gray
+)!default;
